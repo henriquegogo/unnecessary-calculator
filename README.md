@@ -4,20 +4,20 @@ This is a simple calculator web application with a Python backend and a plain Ja
 
 ## Usage
 
-To run the application, execute the `run.sh` script:
+To run the application, use the `make` command:
 
 ```bash
-./run.sh
+make
 ```
 
 This will start a web server on `http://localhost:8000`.
 
 ## Testing
 
-The backend has a suite of unit tests. To run the tests, navigate to the `backend` directory and run the following command:
+The backend has a suite of unit tests. To run the tests, use the `make tests` command:
 
 ```bash
-python3 -m unittest test_calculator.py
+make tests
 ```
 
 ## Backend
