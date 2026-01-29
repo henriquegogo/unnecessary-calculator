@@ -1,15 +1,17 @@
 body {
   background: #DDD;
+  zoom: 200%;
 }
 
 #display {
   width: calc(4 * 40px + 6 * 2px);
   margin-bottom: 5px;
-  padding: 10px;
+  padding: 5px 10px;
   text-align: right; 
   box-sizing: border-box;
-  background: #FFF;
+  background: #696;
   border: 1px solid black;
+  box-shadow: inset 0 0 3px #131;
 }
 
 button {
@@ -27,11 +29,11 @@ button[onclick^="set_num"] {
 }
 
 button[onclick^="set_op"] {
-  background: #999;
+  background: #66C;
 }
 
 button[onclick^="result"] {
-  background: #8DF;
+  background: #EA0;
 }
 
 button:active {

@@ -1,29 +1,61 @@
 import sys, unittest
-from calculator import sum, sub, mult, div
-
 sys.dont_write_bytecode = True
+from calculator import sum, sub, mult, div
 
 class TestCalcula(unittest.TestCase):
 
     def test_sum(self):
-        self.assertEqual(sum(1, 2), 3)
-        self.assertEqual(sum(-1, 1), 0)
-        self.assertEqual(sum(-1, -1), -2)
+        calculation = sum(1, 2)
+        expected = 3
+        self.assertEqual(calculation, expected)
+
+        calculation = sum(-1, 1)
+        expected = 0
+        self.assertEqual(calculation, expected)
+
+        calculation = sum(-1, -1)
+        expected = -2
+        self.assertEqual(calculation, expected)
 
     def test_sub(self):
-        self.assertEqual(sub(2, 1), 1)
-        self.assertEqual(sub(-1, 1), -2)
-        self.assertEqual(sub(-1, -1), 0)
+        calculation = sub(2, 1)
+        expected = 1
+        self.assertEqual(calculation, expected)
+
+        calculation = sub(-1, 1)
+        expected = -2
+        self.assertEqual(calculation, expected)
+
+        calculation = sub(-1, -1)
+        expected = 0
+        self.assertEqual(calculation, expected)
 
     def test_mult(self):
-        self.assertEqual(mult(2, 3), 6)
-        self.assertEqual(mult(-1, 3), -3)
-        self.assertEqual(mult(-1, -3), 3)
+        calculation = mult(2, 3)
+        expected = 6
+        self.assertEqual(calculation, expected)
+
+        calculation = mult(-1, 3)
+        expected = -3
+        self.assertEqual(calculation, expected)
+
+        calculation = mult(-1, -3)
+        expected = 3
+        self.assertEqual(calculation, expected)
 
     def test_div(self):
-        self.assertEqual(div(6, 3), 2)
-        self.assertEqual(div(-6, 3), -2)
-        self.assertEqual(div(-6, -3), 2)
+        calculation = div(6, 3)
+        expected = 2
+        self.assertEqual(calculation, expected)
+
+        calculation = div(-6, 3)
+        expected = -2
+        self.assertEqual(calculation, expected)
+
+        calculation = div(-6, -3)
+        expected = 2
+        self.assertEqual(calculation, expected)
+
         with self.assertRaises(ZeroDivisionError):
             div(6, 0)
 
