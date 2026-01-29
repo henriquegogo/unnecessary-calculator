@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <form method="POST" action="/cgi-bin/calcula.py" id="form">
+      <input type="text" id="display">
+      <input type="hidden" name="num_a" id="num_a">
+      <input type="hidden" name="num_b" id="num_b">
+      <input type="hidden" name="op" id="op">
+    </form>
+    <div>
+      <button type="button" onclick="set_num(this.innerHTML)">7</button>
+      <button type="button" onclick="set_num(this.innerHTML)">8</button>
+      <button type="button" onclick="set_num(this.innerHTML)">9</button>
+      <button type="button" onclick="set_op('div')">÷</button>
+    </div>
+    <div>
+      <button type="button" onclick="set_num(this.innerHTML)">4</button>
+      <button type="button" onclick="set_num(this.innerHTML)">5</button>
+      <button type="button" onclick="set_num(this.innerHTML)">6</button>
+      <button type="button" onclick="set_op('mult')">x</button>
+    </div>
+    <div>
+      <button type="button" onclick="set_num(this.innerHTML)">1</button>
+      <button type="button" onclick="set_num(this.innerHTML)">2</button>
+      <button type="button" onclick="set_num(this.innerHTML)">3</button>
+      <button type="button" onclick="set_op('sub')">-</button>
+    </div>
+    <div>
+      <button type="button" onclick="set_num(this.innerHTML)">0</button>
+      <button type="button"> . </button>
+      <button type="submit" onclick="result()">=</button>
+      <button type="button" onclick="set_op('sum')">+</button>
+    </div>
+  </body>
+</html>
