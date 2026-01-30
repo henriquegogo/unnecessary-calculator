@@ -19,11 +19,11 @@ function result() {
   form.submit()
 }
 
-window.onload = function() {
+window.addEventListener("load", () => {
   if (location.search) {
     let params = new URLSearchParams(location.search)
     display.value = params.get('value')
     history.replaceState({}, null, location.href.split('?')[0])
     should_clean = true
   }
-}
+})
